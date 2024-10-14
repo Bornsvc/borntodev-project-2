@@ -1,0 +1,122 @@
+:root {
+    --color-primary: #2D2A32 ;
+    --color-hover: #EF1F4D;
+    --color-button-search: #9B1C3D;
+    --color-button: #2d2b2f;
+    --color-heading: #f0f8ff;
+    --color-font: #343238;
+    --color-background: rgba(43, 41, 45, 0.6);
+    --color-font-q: #5f5e61;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    color: rgb(255, 255, 255);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+   background-image: url(/img/dark-background-abstract-background-network-3d-background-3840x2160-8324.png);
+}
+
+q , h6 {
+    background: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: var(--color-background);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    font-size: 20px;
+    margin-bottom: 2rem;
+}
+
+header div:first-child {
+    margin-left: 5rem;
+}
+
+header div:last-child {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem ;
+    width: 300px;
+    margin-right: 10rem;
+}
+
+header div:last-child > a {
+    color: red;
+}
+
+header .active {
+    position: relative;
+}
+
+header .active::before {
+    content: '';
+    position: absolute;
+    border: 2px solid red;
+    bottom: -5px;
+    left: -10px;
+    width: 120%;
+}
+
+.container{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    /* border: 1px solid red; */
+    margin-top: 7rem;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat( 4,1fr);
+    column-gap: 10rem;
+    row-gap: 5rem;
+}
+
+.contact i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    font-size: 50px;
+    border-radius: 10px;
+    /* border: 1px solid red; */
+}
+
+#item-1 {
+    background-color: #5f5e61;
+    transition: 0.2s all;
+}
+#item-2 {
+    background-color: rgb(18, 18, 18);
+    transition: 0.2s all;
+}
+
+#item-1:hover {
+    background-color: var(--color-hover);
+    border-radius: 20px;
+    font-size: 70px;
+}
+#item-2:hover {
+    background-color: var(--color-hover);
+    border-radius: 20px;
+    font-size: 70px;
+}

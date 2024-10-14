@@ -1,0 +1,443 @@
+:root {
+    --color-primary: #2D2A32 ;
+    --color-hover: #EF1F4D;
+    --color-button-search: #9B1C3D;
+    --color-button: #2d2b2f;
+    --color-heading: #f0f8ff;
+    --color-font: #343238;
+    --color-background: rgba(43, 41, 45, 0.6);
+    --color-font-q: #5f5e61;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: #000000;
+    position: relative;
+}
+
+body > img:first-child {
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    border-radius: 3px;
+    filter: blur(3px);
+}
+
+q , h6 {
+    background: none;
+}
+
+h6 {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: var(--color-background);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    font-size: 20px;
+    margin-bottom: 2rem;
+}
+
+header div:first-child {
+    margin-left: 5rem;
+}
+
+header div:last-child {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem ;
+    width: 300px;
+    margin-right: 10rem;
+}
+
+header div:last-child > a {
+    color: red;
+}
+
+header .active {
+    position: relative;
+}
+
+header .active::before {
+    content: '';
+    position: absolute;
+    border: 2px solid red;
+    bottom: -5px;
+    left: -5px;
+    width: 120%;
+}
+
+.container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.container section .img-1 {
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+}
+
+.container section .typ-of-game {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.7rem;
+}
+
+
+.container section .typ-of-game .box-1 {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgb(133, 9, 133);
+    background-color: var(--color-button);
+    color: var(--color-heading);
+    height: 50px;
+    width: 22rem;
+    padding: 2rem;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.container section .typ-of-game .box-1 > div  {
+    background: none;
+}
+
+.container section .typ-of-game .box-1:hover {
+    background-color: #19191c;
+}
+
+.container section .typ-of-game .box-1 i {
+    font-size: 40px;
+    background: none;
+}
+
+.container .cut {
+    position: relative;
+    font-weight:  bolder;
+    background: none;
+}
+
+.container .title {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    width: 9.5rem;
+    top: -0.8rem;
+    left: 1.5rem;
+    background-color: #000000;
+    
+}
+
+.container .line {
+    width: 100%;
+    border: 1px solid rgb(94, 93, 93);
+}
+
+/* End of section */
+
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+aside .box-top-aside {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    background-color: var(--color-background);
+    padding: 5px;
+}
+
+.box-top-aside q {
+    color: var(--color-font-q);
+    font-size: smaller;
+    line-height: 1px;
+}
+
+aside .box-top-aside .box-aside-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.box-aside-left .child-box-aside {
+    display: flex;
+    gap: 1rem;
+    transition: all 0.1s;
+    width: 100%;
+    height: 7rem;
+    padding: 8px;
+    position: relative;
+}
+
+.box-aside-left .child-box-aside .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* border: 1px solid red; */
+}
+
+.box-aside-left .child-box-aside:hover {
+    background-color: var(--color-hover);
+}
+
+.box-aside-left .child-box-aside .date {
+    position: absolute;
+    bottom: 1px;
+}
+
+aside .box-top-aside .box-aside-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: larger;
+    padding: 8px;
+}
+
+.box-aside-right:hover {
+    background-color: var(--color-hover);
+}
+
+.box-top-aside .box-aside-right .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.box-aside-right .content q {
+    line-height: 2rem;
+}
+
+aside .box-down-aside {
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 1.5rem;
+}
+
+aside .box-down-aside .felx-aside {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 8px;
+}
+
+.felx-aside .content {
+    display: flex;
+    flex-direction: column;
+    
+}
+.felx-aside .content h6 {
+    font-size: 1.5rem;
+    width:100%  ;
+}
+
+.felx-aside > div:last-child {
+    margin-top: auto;
+}
+
+.felx-aside q {
+    color: var(--color-font-q);
+}
+
+.felx-aside button {
+    background-color: var(--color-button);
+    color: white;
+    width: 120px;
+    padding: 5px 10px;
+    font-size: 13px;
+}
+
+aside .box-down-aside .felx-aside > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+aside .box-down-aside .felx-aside .date > q {
+    font-size: 12px;
+}
+
+.container .cut-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.container .cut-search input {
+    width: 300px;
+    padding: 5px;
+}
+
+.container .cut-search .search {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.container .cut-search .search:hover .name-label{
+    display: none;
+}
+
+.name-label {
+    position: absolute;
+    color: var(--color-font-q);
+    left: 10px;
+}
+
+.container .cut-search .search i {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: absolute;
+    right: 0px;
+    top: -1px;
+}
+
+.container .cut-search .search i:hover {
+    background-color: rgb(214, 11, 11);
+}
+
+/* End of cut  */
+
+article {
+    display: flex;
+    gap: 1rem;
+}
+
+article q {
+    color: var(--color-font-q);
+}
+
+article button {
+    background-color: var(--color-button);
+    color: white;
+    width: 120px;
+    padding: 5px 10px;
+    font-size: 13px;
+}
+
+article .box-article-left {
+    display: flex;
+    gap: 1.5rem;
+}
+
+article .box-article-left .felx-asticle {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.felx-asticle h6 {
+    font-size: 1.5rem;
+}
+
+.felx-asticle .img-1 {
+    background-image: url(/bootstrap-5.3.3-dist/img/StockCake-Minecraft\ Adventure\ Await_1728041376.jpg);
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+}
+.felx-asticle .img-2 {
+    background-image: url(/bootstrap-5.3.3-dist/img/StockCake-Flying\ Pixelated\ Character_1728141862.jpg);
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+}
+
+article .box-article-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+article .box-article-right .box-contact .titel {
+    background-color: var(--color-background);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+article .box-article-right .box-contact .titel .line {
+    background-color: rgb(94, 93, 93);
+    height: 1px;
+    width: 90px;
+    border-radius: 50px;
+}
+
+article .box-article-right .box-contact .contact {
+    display: grid;
+    grid-template-columns: repeat( 4, 1fr);
+}
+
+article .box-article-right .box-contact .contact i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 62.5px;
+    height: 60px;
+    font-size: 20px;
+}
+
+article .box-article-right .box-video .titel {
+    background-color: var(--color-background);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+article .box-article-right .box-video .titel .line {
+    background-color: rgb(94, 93, 93);
+    height: 1px;
+    width: 90px;
+    border-radius: 50px;
+}
+
+
+article .box-article-right .box-video {
+    display: flex;
+    flex-direction: column;
+}
